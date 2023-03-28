@@ -2,14 +2,37 @@
 @cor2:green;
 @cor3:white;
 @width:0.15;
+@tamanho:23px;
 
+///3M
 .drop-shadow{
     text-shadow: 2px 1px 1px #ccc;
     text-decoration: underline;
 }
 h1{
-    .cores(50px,'h1');
+    .cores('h1');
 }
+p{
+    .cores('p');
+}
+body{
+    text-align: center;
+    box-sizing: border-box;
+    margin: 200px;
+}
+//MIXIN
+.cores(@tag){
+    color:@cor;
+    font-size: @tamanho;
+    & when(@tag = 'h1'){
+        text-shadow: 2px 1px 1px #7a7b7c;
+        font-size:@tamanho + 27px;
+    }
+    & when(@tag = 'p'){
+        font-size: @tamanho*1.23;//fazendo operação de multiplicação com a variável
+    }
+}
+
 // p{
 //     //verifica se é uma cor, caso não for, recebe uma cor, caso não tenha a primeira, recebe red
 //     color:if(iscolor(@cor),@cor,red);
@@ -19,22 +42,3 @@ h1{
 //         font-size: 23px;
 //     }
 // }
-p{
-    .cores(50px,'p');
-}
-body{
-    text-align: center;
-    box-sizing: border-box;
-    margin: 200px;
-}
-//MIXIN
-.cores(@tamanho, @tag){
-    color:@cor;
-    font-size: @tamanho;
-    & when(@tag = 'h1'){
-        text-shadow: 2px 1px 1px #7a7b7c;
-    }
-    & when(@tag = 'p'){
-        background-color: lightgreen;
-    }
-}
