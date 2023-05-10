@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Botão que muda de posição aleatoriamente</title>
+    <style>
+        body{
+            background-color: pink;
+        }
+        h1{
+            top:40%;
+            left: 46%;
+            position: absolute;
+        }
+        .container{
+        width:300px;
+        height: 300px;
+        background-color: aqua;
+        border:2px white solid;
+        
+      }
+      #botao {
+        font-size: medium;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 53%;
+        padding: 5px;
+        border-radius:30%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(255, 0, 0);
+        color: rgb(255, 255, 255);
+      }
+      #botao1 {
+        font-size: medium;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 47%;
+        padding: 5px;
+        border-radius:30%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(30, 0, 253);
+        color: rgb(255, 255, 255);
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Quem é você?</h1>
+            <button id="botao1" onclick="adicionarImagem()"> Sou a Gabie</button>
+            <button id="botao" onclick="mudarPosicao()">Não sou a Gabie</button>
+
+    <script src="botaoAleatorio.js"></script>
+  </body>
+</html>
